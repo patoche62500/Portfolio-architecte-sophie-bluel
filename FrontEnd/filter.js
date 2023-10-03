@@ -1,29 +1,44 @@
 import { getData } from "./data.js";
+import { generateGalleryFilter } from "./gallery.js";
 
 let currentfilter = 0;
 
 let filter = {
   namefiltre: ["Tous", "Objets", "Appartement", "Hôtels & restaurants"],
-  filtrefunction: [all, objets],
+  filtrefunction: [all, objets, appart, hotel],
 };
 
 function all() {
   console.log("all");
+  buttonSelection(0);
 
-  const oldbutton = document.querySelectorAll(".filtre")[currentfilter];
-  oldbutton.className = "filtre";
-  currentfilter = 0;
-  const button = document.querySelectorAll(".filtre")[currentfilter];
-  button.className = "filtre filtre--selected";
 }
 
 function objets() {
   console.log("objets");
+  buttonSelection(1);
+  
+}
+
+function appart() {
+  console.log("objets");
+  buttonSelection(2);
+  
+}
+
+function hotel() {
+  console.log("objets");
+  buttonSelection(3);
+  
+}
+
+function buttonSelection(idFilter) {
   const oldbutton = document.querySelectorAll(".filtre")[currentfilter];
   oldbutton.className = "filtre";
-  currentfilter = 1;
+  currentfilter = idFilter;
   const button = document.querySelectorAll(".filtre")[currentfilter];
   button.className = "filtre filtre--selected";
+  generateGalleryFilter(idFilter);
 }
 
 export function generateBouton() {
@@ -64,4 +79,8 @@ function generateFiltre() {
       }
     });
   });*/
+}
+
+export function getCurrentFilter() {
+  return currentfilter;
 }
