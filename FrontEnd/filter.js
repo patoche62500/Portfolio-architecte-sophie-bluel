@@ -3,34 +3,7 @@ import { generateGalleryFilter } from "./gallery.js";
 
 let currentfilter = 0;
 
-let filter = {
-  namefiltre: ["Tous", "Objets", "Appartement", "Hôtels & restaurants"],
-  filtrefunction: [all, objets, appart, hotel],
-};
-
-function all() {
-  console.log("all");
-  buttonSelection(0);
-
-}
-
-function objets() {
-  console.log("objets");
-  buttonSelection(1);
-  
-}
-
-function appart() {
-  console.log("objets");
-  buttonSelection(2);
-  
-}
-
-function hotel() {
-  console.log("objets");
-  buttonSelection(3);
-  
-}
+let filter;
 
 function buttonSelection(idFilter) {
   const oldbutton = document.querySelectorAll(".filtre")[currentfilter];
@@ -45,40 +18,26 @@ export function generateBouton() {
   console.log(getData());
   const containerButton = document.querySelector(".button__container");
 
-  filter.namefiltre.forEach((element, id) => {
+  getData("categories").forEach((element, id) => {
     const button = document.createElement("button");
     button.className = "filtre";
-    button.innerHTML = element;
-    button.addEventListener("click", filter.filtrefunction[id]);
+    button.innerHTML = element.name;
+
+    button.addEventListener("click", () => {
+      fonctionParameter(element.id);
+    });
     containerButton.appendChild(button);
   });
 
   //console.log(filtre);
 
-  generateFiltre();
-  all();
+  buttonSelection(0);
   console.log(filter);
 }
 
-function generateFiltre() {
-  // recuperation des noms des filtres //
-  const data = getData();
-  let exist = false;
-
-  const filtre = data.map((category) => category.category.name);
-  console.log(filtre);
-  /*
-  filtre.forEach((elementCategory) => {
-    //console.log(`element category : ${elementCategory}`);
-
-    filter.forEach((elementFilter) => {
-      //console.log(`element filter : ${elementFilter}`)
-      console.log(`Comparaison ${elementCategory} : ${elementFilter}`);
-      if (elementCategory != elementFilter) {
-        //filter.push(elementCategory);
-      }
-    });
-  });*/
+function fonctionParameter(teste) {
+  console.log("teste");
+  buttonSelection(teste);
 }
 
 export function getCurrentFilter() {
