@@ -1,5 +1,11 @@
+login();
+loginButton();
+
 function login() {
   const bouton = document.querySelector("#formulaire");
+  if (!bouton) {
+    return;
+  }
   bouton.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -14,8 +20,6 @@ function login() {
     loginUser(JSON.stringify(user));
   });
 }
-
-login();
 
 console.log("teste");
 
@@ -46,4 +50,34 @@ async function loginUser(user) {
       console.log("error login");
       break;
   }
+}
+
+export function loginButton() {
+  const login = document.querySelector("#login");
+  login.addEventListener("click", printlog);
+}
+
+function printlog() {
+  console.log("click");
+
+  if (window.localStorage.getItem(1)) {
+    window.localStorage.clear();
+    GetIsLogin();
+  } else {
+    document.location.href = "./login.html";
+  }
+}
+
+export function GetIsLogin() {
+  const login = document.querySelector("#login");
+
+  if (window.localStorage.getItem(1)) {
+    login.innerHTML = "logout";
+    //login.id = "login";
+    console.log("log out");
+  } else {
+    login.innerHTML = "login";
+  }
+
+  //console.log();
 }

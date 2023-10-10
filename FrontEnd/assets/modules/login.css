@@ -1,46 +1,47 @@
-.login{
+.login--selected {
+  font-weight: 600;
+}
 
+.login {
   display: flex;
   flex-direction: column;
   gap: 37px;
 }
 
-.login > h2{
+.login > h2 {
   text-align: center;
 }
 
-.login form{
+.login form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
+  gap: 30px;
 }
 
-.login form fieldset{
+.login form fieldset {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  
 }
 
-.login form fieldset > input{
+.login form fieldset > input {
   height: 51px;
   width: 379px;
 }
 
-#validate{
+#validate {
   height: 36px;
 }
 
-body{
-  background-color: #FFFEF8;
+body {
+  background-color: #fffef8;
 }
 
-footer{
+footer {
   background-color: white;
- 
 }
 
-footer nav ul{
+footer nav ul {
   height: 60px;
 }
