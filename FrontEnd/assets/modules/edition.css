@@ -1,12 +1,16 @@
-.edition{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap:31px;
+.edition {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 31px;
 }
 
-.edition__login{
-    display: flex;
-    align-items: baseline;
-    gap:10.42px;
+.edition__login {
+  display: flex;
+  align-items: baseline;
+  gap: 10.42px;
+}
+
+.hidden {
+  display: none;
 }

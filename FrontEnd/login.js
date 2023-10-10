@@ -71,12 +71,16 @@ function printlog() {
 export function GetIsLogin() {
   const login = document.querySelector("#login");
 
+  const edition = document.querySelector('.edition__login');
+
   if (window.localStorage.getItem(1)) {
     login.innerHTML = "logout";
     //login.id = "login";
     console.log("log out");
+    edition.className ="edition__login"
   } else {
     login.innerHTML = "login";
+    edition.className ="edition__login hidden"
   }
 
   //console.log();
