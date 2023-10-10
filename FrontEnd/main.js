@@ -10,7 +10,7 @@ async function init() {
   generateGalleryFilter(getCurrentFilter());
   generateBouton();
   loginButton();
-  await GetIsLogin();
+  GetIsLogin();
 }
 
 init();
