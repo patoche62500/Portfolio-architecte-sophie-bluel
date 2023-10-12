@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .login--selected {
   font-weight: 600;
 }
@@ -44,4 +49,27 @@ footer {
 
 footer nav ul {
   height: 60px;
+}
+
+.edition__container {
+  background-color: black;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  gap: 11.42px;
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.error {
+  display: none;
+}
+
+.error--visible {
+  display: block;
 }

@@ -1,14 +1,13 @@
-import { fetchCategory, fetchWork } from "./data.js";
-import { generateGalleryFilter } from "./gallery.js";
-import { generateBouton } from "./filter.js";
-import { getCurrentFilter } from "./filter.js";
+import { fetchCategory, fetchWork } from "./js/data.js";
+import { generateGalleryFilter } from "./js/gallery.js";
+import { generateBouton, getCurrentFilter } from "./js/filter.js";
 import { loginButton, GetIsLogin } from "./login.js";
 
 async function init() {
   await fetchWork();
   await fetchCategory();
   generateGalleryFilter(getCurrentFilter());
-  generateBouton();
+
   loginButton();
   GetIsLogin();
 }
