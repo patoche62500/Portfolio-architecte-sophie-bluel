@@ -1,0 +1,15 @@
+.visibility--on{
+    display: flex;
+}
+
+.visibility--off{
+    display: none;
+}
+
+.index--0{
+z-index: 0;
+}
+
+.index--1{
+    z-index: 1;
+}

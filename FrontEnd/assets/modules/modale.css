@@ -1,0 +1,36 @@
+.modale__container {
+  background: rgba(0, 0, 0, 0.5);
+
+  height: 1000px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /*! right: 0; */
+  display: flex;
+  justify-content: center;
+  /*! align-content: ; */
+  align-items: center;
+
+  /* desactive la modale */
+  /*display: none;*/
+}
+
+.modale__container__element {
+  background: white;
+  width: 630px;
+  height: 688px;
+
+  border-radius: 10px;
+}
+
+.block01{
+    position: absolute;
+    /*z-index: 1;*/
+}
+
+.block02{
+    position: absolute;
+    /*z-index: 0;*/
+}

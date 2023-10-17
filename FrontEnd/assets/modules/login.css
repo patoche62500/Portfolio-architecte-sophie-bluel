@@ -54,12 +54,16 @@ footer nav ul {
 .edition__container {
   background-color: black;
   color: white;
-  width: 100%;
+  /*width: 100%;*/
   justify-content: center;
   align-items: center;
   height: 59px;
+  width: 1440px;
   gap: 11.42px;
   display: none;
+  position: relative;
+  z-index: 2;
+  right: 150px;
 }
 
 .visible {
