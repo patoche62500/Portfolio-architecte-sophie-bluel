@@ -76,4 +76,5 @@ footer nav ul {
 
 .error--visible {
   display: block;
+  color:Red;
 }

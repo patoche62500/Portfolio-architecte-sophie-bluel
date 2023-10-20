@@ -21,12 +21,41 @@
     </div>
     <div class="modale__container visibility--off">
       <div class="modale__container__element block01 index--1">
-        <img  id="close" src="./assets/icons/xmark.png" alt="">
-        <button id="addphoto">Ajouter</button>
+        <div class="modale__content">
+          <img id="close" src="./assets/icons/xmark.png" alt="" />
+          <p>Galerie Photo</p>
+          <div id="container__galerie"></div>
+          <div class="line"></div>
+          <button id="addphoto">Ajouter</button>
+        </div>
       </div>
       <div class="modale__container__element block02 index--0">
-        <img  id="close" src="./assets/icons/xmark.png" alt="">
-        <img  id="back" src="./assets/icons/arrow-left.png" alt="">
+        <div class="modale__content">
+          <img id="close" src="./assets/icons/xmark.png" alt="" />
+          <img id="back" src="./assets/icons/arrow-left.png" alt="" />
+          <p>Ajout photo</p>
+          <form class="formulaire">
+            <fieldset class="formulaire__container">
+              <input type="file" name="" id="" accept=".jpg, .jpeg, .png" />
+              <div class="formulaire__container__element">
+                <img src="./assets/icons/picture-svgrepo-com 1.png" alt="" />
+                <button>+ Ajouter photo</button>
+                <span>jpg, png : 4mo max</span>
+              </div>
+            </fieldset>
+            <fieldset class="forumulaire__element">
+              <label for="">Titre</label>
+              <input type="text" name="" id="" />
+            </fieldset>
+            <fieldset class="forumulaire__element">
+              <label for="">Categories</label>
+              <select name="" id=""></select>
+            </fieldset>
+            
+          </form>
+          <div class="line"></div>
+          <button type="button" id="addphoto" disabled>Ajouter</button>
+        </div>
       </div>
     </div>
     <header>
@@ -67,10 +96,11 @@
       <section id="portfolio">
         <div class="edition">
           <h2>Mes Projets</h2>
-          <div class="edition__login hidden">
+
+          <button class="edition__login hidden">
             <img src="./assets/icons/Group.png" alt="edition" />
             <p>modifier</p>
-          </div>
+          </button>
         </div>
 
         <!-- Generation des boutons -->

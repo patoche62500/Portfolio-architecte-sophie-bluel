@@ -1,0 +1,31 @@
+#container__galerie {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#container__galerie .photo {
+  height: 100px;
+  width: 75px;
+}
+
+.line {
+  width: 420px;
+  height: 1px;
+  background: #b3b3b3;
+}
+
+.icon--sup {
+  background-color: black;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  top: -96px;
+  right: -52px;
+}

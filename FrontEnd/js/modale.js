@@ -17,6 +17,13 @@ export function iniModale() {
 function openModale() {
   console.log("click modale");
 
+  const body = document.querySelector("body");
+
+  console.log(body)
+
+  body.classList.add("overflow")
+  //body.className.add()
+
   const modaleContainer = document.querySelector(".modale__container");
 
   modaleContainer.className = "modale__container visibility--on";
@@ -24,6 +31,9 @@ function openModale() {
 
 function closeModale() {
   console.log("click modale");
+
+  const body = document.querySelector("body");
+  body.classList.remove("overflow")
 
   const modaleContainer = document.querySelector(".modale__container");
 
