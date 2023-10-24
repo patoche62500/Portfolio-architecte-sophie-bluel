@@ -4,6 +4,7 @@
   height: 50%;
   flex-wrap: wrap;
   gap: 6px;
+  overflow-y: scroll;
 }
 
 #container__galerie .photo {
@@ -28,4 +29,5 @@
   border: 0;
   top: -96px;
   right: -52px;
+  cursor: pointer;
 }

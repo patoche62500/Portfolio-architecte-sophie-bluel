@@ -58,18 +58,32 @@
   left: 30px;
 }
 
-#addphoto {
+.btn--disabled {
+  background-color: grey;
+}
+
+.btn--actived {
+  background-color: #1d6154;
+}
+
+#addphoto,
+#sendphoto {
   font-family: "Syne";
   font-weight: 700;
   color: white;
-  background-color: #1d6154;
+
   margin: 2em auto;
   width: 180px;
   text-align: center;
   border-radius: 60px;
-
+  border: 0;
   width: 237px;
   height: 36px;
+}
+
+#addphoto:hover,
+#sendphoto:hover {
+  cursor: pointer;
 }
 
 .overflow {
@@ -79,14 +93,14 @@
 .formulaire {
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
 }
 
-.formulaire__container{
+.formulaire__container {
   border-radius: 3px;
   width: 420px;
   height: 169px;
-  background: #E8F1F6; 
+  background: #e8f1f6;
   position: relative;
 }
 
@@ -96,7 +110,7 @@ input[type="file"] {
   height: 100%;
 }
 
-.formulaire__container__element{
+.formulaire__container__element {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -108,13 +122,32 @@ input[type="file"] {
   pointer-events: none;
 }
 
-.forumulaire__element{
+.forumulaire__element {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
   width: 100%;
 }
 
-.forumulaire__element input, select{
-  height: 51px; 
+.forumulaire__element input,
+select {
+  height: 51px;
+}
+
+#preview{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  object-fit: contain;
+}
+
+.error--formulaire{
+  position: absolute;
+  bottom: 100px;
 }

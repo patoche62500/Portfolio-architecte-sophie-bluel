@@ -26,7 +26,7 @@
           <p>Galerie Photo</p>
           <div id="container__galerie"></div>
           <div class="line"></div>
-          <button id="addphoto">Ajouter</button>
+          <button id="addphoto" class="btn--actived">Ajouter</button>
         </div>
       </div>
       <div class="modale__container__element block02 index--0">
@@ -34,9 +34,10 @@
           <img id="close" src="./assets/icons/xmark.png" alt="" />
           <img id="back" src="./assets/icons/arrow-left.png" alt="" />
           <p>Ajout photo</p>
-          <form class="formulaire">
+          <form id="send" class="formulaire">
             <fieldset class="formulaire__container">
-              <input type="file" name="" id="" accept=".jpg, .jpeg, .png" />
+              <input required type="file" name="image" id="filephoto" accept=".jpg, .jpeg, .png" />
+              <img src="" alt="" id="preview">
               <div class="formulaire__container__element">
                 <img src="./assets/icons/picture-svgrepo-com 1.png" alt="" />
                 <button>+ Ajouter photo</button>
@@ -44,17 +45,21 @@
               </div>
             </fieldset>
             <fieldset class="forumulaire__element">
-              <label for="">Titre</label>
-              <input type="text" name="" id="" />
+              <label for="title">Titre</label>
+              <input required type="text" name="title" id="title" />
             </fieldset>
             <fieldset class="forumulaire__element">
-              <label for="">Categories</label>
-              <select name="" id=""></select>
+              <label for="categories">Categories</label>
+              <select required name="category" id="categories">
+                <option value="0"></option>
+              </select>
             </fieldset>
-            
+            <!--<button type="submit"> boutonSubmit</button>-->
           </form>
           <div class="line"></div>
-          <button type="button" id="addphoto" disabled>Ajouter</button>
+          <p class="error error--formulaire">Une erreur est survenue</p>
+          <button form="send" type="submit" id="sendphoto" class="btn--actived">Ajouter</button>
+          
         </div>
       </div>
     </div>

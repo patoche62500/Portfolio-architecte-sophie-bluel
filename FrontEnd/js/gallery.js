@@ -5,7 +5,7 @@ export function generateGalleryFilter(idFilter) {
   clearArray(container);
 
   getData().forEach((element) => {
-    console.log(element.category.id);
+    //console.log(element.category.id);
     if (idFilter == 0) {
       generationContent(container, element);
     } else if (idFilter == element.category.id) {

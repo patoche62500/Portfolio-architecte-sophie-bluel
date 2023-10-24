@@ -9,18 +9,19 @@ function login() {
   }
 
   bouton.addEventListener("submit", data);
+
   function data(event) {
     event.preventDefault();
-    console.log("paramaer");
+    //console.log("paramaer");
 
     //recupere les inputs du formulaire
     const formData = new FormData(bouton);
     // Convert the FormData object to an object with key-value pairs using Object.fromEntries()
     const data = Object.fromEntries(formData.entries());
 
-    console.log(data);
+    //console.log(data);
 
-    console.log("click");
+    //console.log("click");
 
     // Création de l’objet du nouvel avis.
     const user = {
@@ -34,16 +35,16 @@ function login() {
 
 function data(event) {
   event.preventDefault();
-  console.log("paramaer");
+  //console.log("paramaer");
 
   //recupere les inputs du formulaire
   const formData = new FormData(bouton);
   // Convert the FormData object to an object with key-value pairs using Object.fromEntries()
   const data = Object.fromEntries(formData.entries());
 
-  console.log(data);
+  //console.log(data);
 
-  console.log("click");
+  //console.log("click");
 
   // Création de l’objet du nouvel avis.
   const user = {
@@ -63,12 +64,12 @@ async function loginUser(user) {
     body: JSON.stringify(user),
   });
 
-  console.log(userData);
+  //console.log(userData);
   const userDataJson = await userData.json();
   //.then((response) => response.json())
   //.then((response) => response)
   //.catch((error) => alert("Erreur : " + error));
-  console.log(userDataJson);
+  //console.log(userDataJson);
   //works = galleryDataJson;
 
   //
@@ -77,13 +78,13 @@ async function loginUser(user) {
   // response correcte de la par du server
   if (userData.ok) {
     window.localStorage.setItem("userId", userDataJson.token);
-    console.log(userDataJson.userId, userDataJson.token);
+    //console.log(userDataJson.userId, userDataJson.token);
     document.location.href = "./index.html";
   } else {
     const error = document.querySelector(".error");
     error.className = "error--visible";
-    console.log(userData.statusText);
-    console.log("error login");
+    //console.log(userData.statusText);
+    //console.log("error login");
   }
 }
 
@@ -93,7 +94,7 @@ export function loginButton() {
 }
 
 function printlog() {
-  console.log("click");
+  //console.log("click");
 
   if (window.localStorage.getItem("userId")) {
     window.localStorage.clear();
@@ -111,7 +112,7 @@ export function GetIsLogin() {
   if (window.localStorage.getItem("userId")) {
     login.innerHTML = "logout";
 
-    console.log("log out");
+    //console.log("log out");
     edition.className = "edition__login";
     displayEditionMode(true);
     return true;
