@@ -101,6 +101,6 @@ export async function fetchSendContent(formData) {
   }
   else{
     const error = document.querySelector(".error");
-    error.className = "error--visible";
+    error.className = "error--visible error--formulaire";
   }
 }

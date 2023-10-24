@@ -48,6 +48,15 @@ export function closeModale() {
   const modaleContainer = document.querySelector(".modale__container");
 
   modaleContainer.className = "modale__container visibility--off";
+
+  document.querySelector('#preview').src="";
+  document.querySelector('#send').reset();
+  const error = document.querySelector(".error--visible");
+  if(error)
+  {
+    error.className = "error";
+  }
+  document.querySelector(".formulaire__container__element").classList.remove("visibility--off");
 }
 
 function nextModale() {
@@ -107,10 +116,14 @@ function checkValue() {
 
     if (filePhoto.value) {
       preview.src = URL.createObjectURL(filePhoto.files[0]);
+
+      document.querySelector(".formulaire__container__element").classList.add("visibility--off");
+
       console.log(filePhoto.files[0]);
       console.log(preview);
     } else {
       preview.src = "";
+      document.querySelector(".formulaire__container__element").classList.remove("visibility--off");
     }
   }
 }
