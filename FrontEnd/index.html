@@ -22,7 +22,7 @@
     <div class="modale__container visibility--off">
       <div class="modale__container__element block01 index--1">
         <div class="modale__content">
-          <img id="close" src="./assets/icons/xmark.png" alt="" />
+          <img class="close" src="./assets/icons/xmark.png" alt="" />
           <p>Galerie Photo</p>
           <div id="container__galerie"></div>
           <div class="line"></div>
@@ -31,15 +31,15 @@
       </div>
       <div class="modale__container__element block02 index--0">
         <div class="modale__content">
-          <img id="close" src="./assets/icons/xmark.png" alt="" />
+          <img class="close" src="./assets/icons/xmark.png" alt="" />
           <img id="back" src="./assets/icons/arrow-left.png" alt="" />
           <p>Ajout photo</p>
           <form id="send" class="formulaire">
             <fieldset class="formulaire__container">
               <input required type="file" name="image" id="filephoto" accept=".jpg, .jpeg, .png" />
-              <img src="" alt="" id="preview">
+              <img src="#" alt="" id="preview">
               <div class="formulaire__container__element">
-                <img src="./assets/icons/picture-svgrepo-com 1.png" alt="" />
+                <img src="./assets/icons/Galerie.png" alt="Galerie Photo" />
                 <button>+ Ajouter photo</button>
                 <span>jpg, png : 4mo max</span>
               </div>
@@ -50,8 +50,8 @@
             </fieldset>
             <fieldset class="forumulaire__element">
               <label for="categories">Categories</label>
-              <select required name="category" id="categories">
-                <option value="0"></option>
+              <select name="category" id="categories">
+                <option value="0">Veuillez choisir une option</option>
               </select>
             </fieldset>
             <!--<button type="submit"> boutonSubmit</button>-->
@@ -104,7 +104,7 @@
 
           <button class="edition__login hidden">
             <img src="./assets/icons/Group.png" alt="edition" />
-            <p>modifier</p>
+            modifier
           </button>
         </div>
 

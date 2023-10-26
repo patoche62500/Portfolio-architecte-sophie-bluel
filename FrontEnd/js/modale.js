@@ -4,7 +4,7 @@ export function iniModale() {
   const buttonModifier = document.querySelector(".edition__login");
   buttonModifier.addEventListener("click", openModale);
 
-  const close = document.querySelectorAll("#close");
+  const close = document.querySelectorAll(".close");
   close.forEach((element) => {
     element.addEventListener("click", closeModale);
   });

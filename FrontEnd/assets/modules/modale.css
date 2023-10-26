@@ -33,7 +33,7 @@
   position: absolute;
 }
 
-#close {
+.close {
   position: absolute;
   top: 26px;
   left: 576px;
